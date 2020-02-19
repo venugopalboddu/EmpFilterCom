@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><img src="https://s3.amazonaws.com/myamcatimages/company/images/8527.png" height="50px"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 1100px">
+        <app-header *ngIf="status" (show)="fn($event)"></app-header>
+    </div>
+  </nav>
+<div class="row">
+<div class="col-3 jumbotron" style="height: 680px">
+    <h4 style="color: brown" class="text-center">Sidebar Componenet</h4><hr/><br/>
+    <h4 class="text-center"><button class="btn btn-success my-2 my-sm-0" (click)="call()">Enable Search Box</button></h4>
+</div>
+<div class="col-9">
+<app-emplist [list]="data"></app-emplist>
+</div>
+</div>
+
+
+
+

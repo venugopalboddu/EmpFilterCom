@@ -1,0 +1,23 @@
+<br/>
+<h4 style="color: brown" class="text-center">Employee List Componenet</h4><hr/><br/>
+
+<div class="container text-center" style="margin-top: 50px;">
+   
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">EmpID</th>
+        <th scope="col">EmployeeName</th>
+        <th scope="col">Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of students | search: list; let i=index;">
+        <td>{{i +1}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.city}}</td>
+      </tr>    
+    </tbody>
+  </table>
+  <h2 *ngIf="(students | search: list)?.length==0" style="color: red">Result not found</h2> 
+</div>

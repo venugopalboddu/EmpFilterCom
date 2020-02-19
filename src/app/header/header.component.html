@@ -1,0 +1,11 @@
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <input type="text" placeholder="Search Employee Name" formControlName="name" class="form-inline my-2 my-lg-6" [ngClass]="{ 'has-danger': submitted && cf.name.errors }"/>
+            &nbsp;
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <div *ngIf="submitted && cf.name.errors" class="err">
+              <div *ngIf="cf.name.errors.required"><span style="color: red">Please enter employee name*</span></div>
+            </div>
+    </form>
+    
+
+      
